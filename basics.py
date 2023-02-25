@@ -126,5 +126,7 @@ print(len(li)) #length of the list
 tup = (1,2,3)
 print(tup[0])
 
-
-
+print(type((1,)))
+len(tup) 
+print(tup + (4,5,6)) 
+# You can do most of the list operations on tuples too
