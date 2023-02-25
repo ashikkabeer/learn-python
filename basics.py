@@ -58,7 +58,7 @@ print(f"She said {first}") #formatted string literals
 #None is an object
 
 #####################
-###### Variables#####
+##### Variables #####
 #####################
 
 print() #it prints a new line after printing the data
@@ -66,8 +66,8 @@ print("Hello World",end="!")
 print(" is this working") #here above line ending with a mark rather than printing a new line
 
 #input data from console
-scan = input("Enter your age : ")
-print(scan)
+#scan = input("Enter your age : ")
+#print(scan)
 
 #there is no declaration, only assignments
 #use lovercase_with_underscore for naming variables
@@ -130,3 +130,78 @@ print(type((1,)))
 len(tup) 
 print(tup + (4,5,6)) 
 # You can do most of the list operations on tuples too
+a, b, c = (1,2,3) #a=1, b=2, c=3
+print(a) 
+print(b)
+print(c)
+
+##################
+###Dictionaries###
+##################
+
+dict = {"one" : 1, "two" : 2, "three" : 3}
+print(dict["one"])
+
+#dictionaries store mappings from keys to values
+#keys for dictionaries have to be immutable typws
+#immutable types includes ints, floats, strings, tuples
+
+print(list(dict.keys())) #get all keys as an iterable with keys()
+
+print(list(dict.values())) #get all values as an iterable with values()
+print("one" in dict) #check for the existance
+
+dict.setdefault("five",5) #insert into dictionary if the key isn't present
+print(list(dict.keys()))
+
+dict.update() # another way to add
+del dict["one"] #delete the key one
+print(dict)
+
+someSet = {1,1,2,2,3,3,4,4,5,5,6,6,7,7} #set store the well sets
+print(someSet) #print {1, 2, 3, 4, 5, 6, 7}
+
+someSet.add(8) #add elemets
+print(someSet)
+
+################################
+###Control Flow and Iterables###
+################################
+
+var = 50
+if var > 10:
+    print(f"{var} is bigger than 10" )
+else:
+    print(f"{var} is smaller than 10")
+
+for animal in ["dogs", "cat", "mouse"] :
+    print("{} is a mammal".format(animal)) #format() to interpolate formatted strings
+
+for i in range(5): # prints number from 1 to 5
+    print(i)
+
+for i in range(5,10): # prints number from 5 to 9
+    print(i)
+
+print("for loop")
+
+for i in range(4, 19, 3) : #range(lower,upper,step)
+    print(i)
+
+animal = ["dog","cat", "mouse"]
+for i, value in enumerate(animal):
+    print(i,value)
+
+x=0
+while(x < 4):
+    print(x)
+    x = x +1
+
+try:
+    raise IndexError("this is index error")
+except IndexError as e:
+    pass
+else:
+    print("All good")
+finally:
+    print("cleaned up resouces")
