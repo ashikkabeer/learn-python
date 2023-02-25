@@ -78,6 +78,12 @@ li = []
 li.append(1) #appen new elements to an array
 li.append(2)
 li.append(4)
+li.append(5)
+li.append(6)
+li.append(7)
+li.append(8)
+li.append(9)
+li.append(10)
 print(li)
 
 li.pop() #delete last element
@@ -87,5 +93,38 @@ print(li[0]) #print first index
 print(li[-1]) #print last index
 
 #li[4] => raise an IndexError
+
+print(li[1:8]) #returns value from index 1 to 8
+print(li[2:]) #returns from 2nd to last index
+print(li[::2]) #returns list selecting every second entry
+print(li[::-1]) #returns list in reverse order
+
+li2 = li[:]
+print(li2)
+
+del li[2] #remove arbitrary elements
+print([li])
+
+li.remove(2) #removes the value, if value not found, raises a value error
+print(li)
+
+li.insert(3,4) #inserted 3 in index 4
+print(li)
+
+li.index(5) #returns the index of the value.
+
+li3 = ['q','w','e','r','t','y']
+print(li + li3) #concatenated two lists
+li.extend(li3) #concatenated two lists using extends()
+print(li) 
+print('q' in li) #checks elements in the list
+print(len(li)) #length of the list
+
+###TUPLES###
+#tuples is like a list, but are immutable
+
+tup = (1,2,3)
+print(tup[0])
+
 
 
