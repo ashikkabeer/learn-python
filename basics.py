@@ -1,5 +1,6 @@
 #started learning python
 print('hello world')
+print('learning python with @Joxz')
 
 #primitives
 print(1+1) #simple addition
